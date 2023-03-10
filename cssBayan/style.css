@@ -95,21 +95,22 @@ main {
 
 .header__input:checked ~.item__content{
     max-height: 40vh;
+    animation: 0.65s 1 chose ease-in-out;
 }
 
 .header__input:checked ~.item__header {
     color: #000000;
+    animation: 0.65s 1 chose ease-in-out;
 }
 
 .header__input:checked +.item__header .fa-solid {
     transform: rotate(45deg);
-    color: #000000;
 }
 
 @media(min-width: 820px) {
 
     main {
-        padding: 2% 20%;
+        padding: 2% 25%;
     }
 
     .bayan__header {
@@ -122,7 +123,16 @@ main {
     }
 
     .content__img {
-        max-height: 45%;
-        width: 45%;
+        max-height: 30%;
+        width: 30%;
+    }
+}
+
+@keyframes chose {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
     }
 }
