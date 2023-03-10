@@ -4,31 +4,32 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
     --element-color: #3a4be7;
     --color-active: #000000;
-    --background-color: #d4d4c7;
+    --background-color: #e2e2d38a;
     --underline-color: #adabab7e;
+    --active-link: #afafaf;
 }
 
 main {
     display: flex;
     justify-content: center;
-    height: 100%;
-    padding: 5% 20%;
+    padding: 5% 0;
 }
 
 .wrapper {
     height: 100%;
+    padding: 0 20%;
+    padding-bottom: 0;
 }
 
 .bayan {
     width: 100%;
     color: var(--color-active);
-}
-
-.bayan:hover .bayan__item {
-    color: var(--element-color);
 }
 
 .bayan__header {
@@ -75,16 +76,24 @@ main {
     transition: 0.3s;
 }
 
-.bayan__item:hover {
-    cursor: pointer;
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 20%;
+    font-size: 1.2em;
+    background-color: var(--color-active);
 }
 
-.bayan__item:hover .fa-solid {
-    transform: rotate(45deg);
+.footer__year {
+    color: white;
+    align-self: center;
 }
 
-.bayan__item:hover .item__content{
-    max-height: 40vh;
+.footer a {
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    transition: color 0.5s ease-in-out;
 }
 
 .underline {
@@ -110,12 +119,20 @@ main {
 @media(min-width: 820px) {
 
     main {
-        padding: 2% 25%;
+        padding: 2% 0;
+    }
+
+    .wrapper {
+        padding: 0 25%;
     }
 
     .bayan__header {
         font-size: 2.2em;
         font-weight: 900;
+    }
+
+    .bayan:hover .bayan__item {
+        color: var(--element-color);
     }
 
     .item__header {
@@ -125,6 +142,32 @@ main {
     .content__img {
         max-height: 30%;
         width: 30%;
+    }
+
+    .bayan__item:hover {
+        cursor: pointer;
+    }
+    
+    .bayan__item:hover .fa-solid {
+        transform: rotate(45deg);
+    }
+    
+    .bayan__item:hover .item__content{
+        max-height: 40vh;
+    }
+
+    .footer {
+        padding: 1.5% 25%;
+        font-size: 1.2em;
+        background-color: var(--color-active)
+    }
+
+    .footer__socials {
+        font-size: 1.5em;
+    }
+
+    .footer a:hover {
+        color: var(--active-link);
     }
 }
 
