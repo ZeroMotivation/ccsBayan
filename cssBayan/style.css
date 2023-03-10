@@ -58,8 +58,21 @@ main {
     margin-bottom: 0.8em;
 }
 
+.header__input {
+    display: none;
+}
+
+.fa-solid {
+    align-self: center;
+    transition: 0.3s;
+}
+
 .bayan__item:hover {
     cursor: pointer;
+}
+
+.bayan__item:hover .fa-solid {
+    transform: rotate(45deg);
 }
 
 .bayan__item:hover .item__header {
