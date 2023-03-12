@@ -18,7 +18,7 @@ body {
 main {
     display: flex;
     justify-content: center;
-    padding: 5% 0;
+    padding: 10% 0;
 }
 
 .wrapper {
@@ -78,22 +78,31 @@ main {
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 5% 20%;
     font-size: 1.2em;
     background-color: var(--color-active);
 }
 
 .footer__year {
+    margin-bottom: 0.2em;
     color: white;
-    align-self: center;
+    text-align: center;
+    font-size: 0.8em;
 }
 
 .footer a {
+    margin-bottom: 0.2em;
     color: white;
     text-decoration: none;
     align-self: center;
     transition: color 0.5s ease-in-out;
+}
+
+.footer__socials {
+    font-size: 1.3em;
 }
 
 .underline {
@@ -108,7 +117,7 @@ main {
 }
 
 .header__input:checked ~.item__header {
-    color: #000000;
+    color: var(--color-active);
     animation: 0.65s 1 chose ease-in-out;
 }
 
@@ -151,12 +160,14 @@ main {
     .bayan__item:hover .fa-solid {
         transform: rotate(45deg);
     }
-    
+
     .bayan__item:hover .item__content{
         max-height: 40vh;
     }
 
     .footer {
+        flex-direction: row;
+        justify-content: space-between;
         padding: 1.5% 25%;
         font-size: 1.2em;
         background-color: var(--color-active)
